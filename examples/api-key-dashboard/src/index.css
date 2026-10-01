@@ -1,0 +1,35 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: 210 40% 98%;
+  --foreground: 222 47% 11%;
+  --muted: 210 40% 96%;
+  --muted-foreground: 215 16% 47%;
+  --border: 214 32% 91%;
+  --primary: 221 83% 53%;
+  --primary-foreground: 210 40% 98%;
+  --destructive: 0 72% 51%;
+}
+
+* { border-color: hsl(var(--border)); }
+html { background: hsl(var(--background)); }
+body {
+  margin: 0;
+  min-width: 320px;
+  color: hsl(var(--foreground));
+  background:
+    radial-gradient(circle at 82% 8%, rgba(37, 99, 235, 0.045), transparent 27rem),
+    hsl(var(--background));
+  font-family: Inter, ui-sans-serif, system-ui, sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+button, input { font: inherit; }
+button:focus-visible, input:focus-visible {
+  outline: 2px solid #2563eb;
+  outline-offset: 2px;
+}
+::selection { background: #dbeafe; }
